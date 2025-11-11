@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Layout que define la pantalla de presentación de la aplicación.
+- Se usa ConstraintLayout para alinear los elementos con restricciones flexibles
+- En esta pantalla se muestran datos personales simulados (nombre, edad y descripción) junto con un botón
+para navegar al formulario de contacto, y un texto oculto que sirve para mostrar una confirmación si llegan datos del formulario.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/presentation_layout"
+    style="@style/AppTheme"
+    android:padding="20dp">
+
+    <!--
+    Texto del título principal de la pantalla.
+    - Usa un estilo definido en "styles.xml"
+    - texto definido en strings.xml.
+    - Está anclado al principio de la página y centrado horizontalmente.
+    -->
+    <TextView
+        android:id="@+id/presentationTitle"
+        style="@style/TitleText"
+        android:text="@string/present_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--
+    Título de la sección del nombre.
+    - Usa un estilo definido en "styles.xml"
+    - texto definido en strings.xml.
+    - Está colocado debajo del título.
+    -->
+    <TextView
+        android:id="@+id/tvName"
+        style="@style/SubtitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/label_nombre"
+        app:layout_constraintTop_toBottomOf="@id/presentationTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"/>
+
+    <!--
+    Texto de la sección del nombre.
+    - Usa un estilo definido en "styles.xml"
+    - texto definido en strings.xml.
+    - Está colocado debajo del título de la sección.
+    -->
+    <TextView
+        android:id="@+id/tvNameText"
+        style="@style/LabelText"
+        android:text="@string/desc_name"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--
+    Título de la sección de la edad.
+    - Usa un estilo definido en "styles.xml"
+    - texto definido en strings.xml.
+    - Está colocado debajo de la sección anterior, dejando una separación entre secciones.
+    -->
+    <TextView
+        android:id="@+id/tvAge"
+        style="@style/SubtitleText"
+        android:text="@string/label_edad"
+        app:layout_constraintTop_toBottomOf="@id/tvNameText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"/>
+
+    <!--
+    Texto de la sección de la edad.
+    - Usa un estilo definido en "styles.xml"
+    - texto definido en strings.xml.
+    - Está colocado debajo del título de la sección.
+    -->
+    <TextView
+        android:id="@+id/tvAgeText"
+        style="@style/LabelText"
+        android:text="@string/desc_age"
+        app:layout_constraintTop_toBottomOf="@id/tvAge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--
+    Título de la sección de la descripción.
+    - Usa un estilo definido en "styles.xml"
+    - texto definido en strings.xml.
+    - Está colocado debajo de la sección anterior, dejando una separación entre secciones.
+    -->
+    <TextView
+        android:id="@+id/tvDesc"
+        style="@style/SubtitleText"
+        android:text="@string/label_descripcion"
+        app:layout_constraintTop_toBottomOf="@id/tvAgeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"/>
+
+    <!--
+    Texto de la sección de la descripción.
+    - Usa un estilo definido en "styles.xml"
+    - texto definido en strings.xml.
+    - Está colocado debajo del título de la sección.
+    -->
+    <TextView
+        android:id="@+id/tvDescText"
+        style="@style/LabelText"
+        android:text="@string/desc_desc"
+        app:layout_constraintTop_toBottomOf="@id/tvDesc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--
+        Botón para ir a la pantalla del formulario
+        - Usa un estilo definido en "styles.xml"
+        - texto definido en strings.xml.
+        - Está colocado anclado al final de la página y centrado horizontalmente.
+        -->
+    <Button
+        android:id="@+id/btnToContact"
+        style="@style/ButtonTheme"
+        android:text="@string/btn_ir_formulario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!--
+    Texto de confirmación que se muestra si vienen datos del formulario
+    - Se mantiene oculto por defecto (visibility="gone")
+    - Puede hacerse visible si el usuario llega desde el formulario con datos enviados
+    - Está colocado anclado al final de la página y centrado horizontalmente.
+    -->
+    <TextView
+        android:id="@+id/tvConfirmation"
+        style="@style/LabelText"
+        android:text=""
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

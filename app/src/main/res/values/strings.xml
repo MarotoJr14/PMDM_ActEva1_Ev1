@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Contacto GBM</string>
+    <string name="main_title">App de contacto\nGonzalo Bravo Maroto</string>
+    <string name="present_title">Presentación</string>
+    <string name="contact_title">Formulario de contacto</string>
+
+    <string name="btn_ir_presentacion">Ir a presentación</string>
+    <string name="btn_ir_formulario">Formulario de contacto</string>
+    <string name="btn_enviar">Enviar</string>
+
+    <string name="label_nombre">Nombre:</string>
+    <string name="label_edad">Edad:</string>
+    <string name="label_descripcion">Descripción:</string>
+
+    <string name="desc_name">Gonzalo Bravo Maroto</string>
+    <string name="desc_age">25 años</string>
+    <string name="desc_desc">Soy entrenador de fútbol base
+        y desarrollador de aplicaciones multiplataforma.
+        Me apasiona tanto el trabajo en equipo y la formación
+        de jóvenes deportistas como la creación de soluciones
+        tecnológicas que mejoren la comunicación y la gestión en
+        el día a día. Combino la disciplina y estrategia del deporte
+        con la creatividad y precisión del desarrollo de software para
+        alcanzar siempre los mejores resultados.</string>
+
+    <string name="hint_name">Tu nombre...</string>
+    <string name="hint_email">tu@correo.com</string>
+    <string name="hint_message">Tu mensaje...</string>
+</resources>

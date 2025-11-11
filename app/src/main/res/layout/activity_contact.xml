@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Layout de la pantalla de contacto (ContactActivity)
+- Usa ConstraintLayout como contenedor principal para organizar los elementos.
+- Incluye tres campos de entrada (nombre, email, mensaje) y un botón de envío.
+- Todos los estilos (colores, tipografía, etc.) se definen en styles.xml.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contact_layout"
+    style="@style/AppTheme"
+    android:padding="20dp">
+
+    <!--
+    TÍTULO DE LA PANTALLA
+    - Muestra el texto "Formulario de contacto" (definido en strings.xml)
+    - Centrado horizontalmente en la parte superior.
+    - Usa un estilo personalizado @style/TitleText para el tamaño y color del texto.
+    -->
+    <TextView
+        android:id="@+id/contactTitle"
+        style="@style/TitleText"
+        android:text="@string/contact_title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--
+    CAMPO NOMBRE
+    - EditText para que el usuario introduzca su nombre.
+    - Usa estilo LabelText para tamaño/tipo de letra.
+    - Muestra un hint (texto guía) definido en strings.xml: "Nombre...".
+    - Se sitúa debajo del título, con un margen superior de 25dp.
+    -->
+    <EditText
+        android:id="@+id/etName"
+        style="@style/LabelText"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/contactTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="25dp"/>
+
+    <!--
+    CAMPO CORREO ELECTRÓNICO
+    - EditText para introducir un email.
+     - Texto definido en strings.xml ("tu@correo.com").
+    - Usa inputType "textEmailAddress" para teclado adaptado y validación de formato.
+    - Posicionado debajo del campo de nombre, con 20dp de separación vertical.
+    -->
+    <EditText
+        android:id="@+id/etEmail"
+        style="@style/LabelText"
+        android:hint="@string/hint_email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintTop_toBottomOf="@id/etName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!--
+    CAMPO MENSAJE
+    - EditText multilínea para escribir un mensaje.
+    - Usa inputType "textMultiLine" para permitir saltos de línea.
+     - Texto definido en strings.xml ("Tu mensaje...").
+    - Se coloca debajo del email, y justo encima del botón de envío.
+    - Margen vertical de 12dp para separar visualmente.
+    -->
+    <EditText
+        android:id="@+id/etMessage"
+        style="@style/LabelText"
+        android:hint="@string/hint_message"
+        android:inputType="textMultiLine"
+        android:minLines="1"
+        app:layout_constraintTop_toBottomOf="@id/etEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnSend"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <!--
+   BOTÓN ENVIAR
+   - Usa el estilo @style/ButtonTheme (definido en styles.xml) para color, tamaño y tipografía.
+   - Texto definido en strings.xml ("Enviar").
+   - Anclado al fondo del layout y centrado horizontalmente.
+   -->
+    <Button
+        android:id="@+id/btnSend"
+        style="@style/ButtonTheme"
+        android:text="@string/btn_enviar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

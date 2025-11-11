@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Layout principal de la pantalla.
+- Se usa ConstraintLayout para alinear los elementos con restricciones flexibles
+- Todos los estilos (colores, tipografía, etc.) se definen en styles.xml.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    style="@style/AppTheme"
+    android:padding="20dp">
+
+    <!--
+   Imagen del logo de la app.
+   - Usa un estilo personalizado (tamaño, forma, etc.)
+   - Incluye una descripción accesible para usuarios con lector de pantalla
+   - Muestra el icono principal de la aplicación.
+   - Se posiciona en la parte superior y centrada horizontalmente.
+   -->
+    <ImageView
+        android:id="@+id/logo"
+        style="@style/ImageTheme"
+        android:contentDescription="@string/main_title"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!--
+    Texto del título principal de la pantalla.
+    - Usa un estilo definido en "styles.xml"
+    - texto definido en strings.xml.
+    - Está colocado debajo del logo y centrado horizontalmente.
+    -->
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/TitleText"
+        android:text="@string/main_title"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--
+        Botón para ir a la pantalla de presentación
+        - Usa un estilo definido en "styles.xml"
+        - texto definido en strings.xml.
+        - Está colocado anclado al final de la página y centrado horizontalmente.
+        -->
+    <Button
+        android:id="@+id/btnToPresentation"
+        style="@style/ButtonTheme"
+        android:text="@string/btn_ir_presentacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
