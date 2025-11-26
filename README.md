@@ -16,10 +16,13 @@ Aplicación Android nativa (Kotlin + XML) con 3 Activities:
 4. Conecta un emulador o dispositivo y pulsa Run (▶).
 
 ## Capturas de pantalla
-- `image/MainActivity.png`
-- `image/PresentationActivity.png`
-- `image/ContactActivity.png`
-
+### Pantalla de la Pantalla Principal
+![Captura de Pantalla de la Pantalla Principal](image/MainActivity.png)
+### Pantalla de Presentación
+![Captura de Pantalla de la Pantalla de Presentación](image/PresentationActivity.png)
+### Pantalla de Contacto
+![Captura de Pantalla de la Pantalla de Contacto](image/ContactActivity.png)
+ 
 ## Validaciones implementadas
 - Nombre: obligatorio (no vacío).
 - Email: obligatorio + patrón (`android.util.Patterns.EMAIL_ADDRESS`) para validar formato.
